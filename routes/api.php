@@ -1,7 +1,8 @@
 <?php
 
-Route::get('/ok', function (){
-    return ['status'=>true];
-});
+use Illuminate\Http\Request;
 
-Route::get('/chamados', 'api\ChamadoController@listarTodos');
+Route::get('/chamados', 'api\ChamadoController@listarTodos')->middleware('bindings');
+
+
+
